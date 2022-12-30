@@ -1,3 +1,18 @@
+Steps:
+Case 1) java.lang Thread class:-
+Step1:-User define class extends Thread.  
+         exa. public class Test extends Thread
+Step2:-User define class must be override run() method which is overriding method of java.lang Thrad class
+   exa   public void run(){
+                     }
+Step3:-creating object of user define class (Test t=new Test)
+Step4:-call start() method which is intaranaly active run() method  
+             exa.      t.start()
+
+
+===============================================================================================
+Example
+
 class Test extends Thread{
        public void run() {
     	   for(int i=0;i<5;i++) {

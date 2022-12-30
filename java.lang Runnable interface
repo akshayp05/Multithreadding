@@ -1,0 +1,24 @@
+Step1:-User define class implements runnable interface.  
+         exa. public class Test implements runnable
+Step2:-User define class must be override run() method which is overriding method of java.lang runnable
+       exa   public void run(){
+                     }
+Step3:-creating object of user define class (Test t=new Test)
+Step4:- the ref. of user define class is binded into object of thread class
+             Thread  t1=new Thread(t)      //  t---ref of user define class
+                 t1.start();
+===========================================================================================================================
+Example:-
+public class Mythread implements Runnable {
+
+	public void run() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(i-2);
+		}
+		}
+	public static void main(String[] args) {
+		Mythread m=new Mythread();
+		Thread t=new Thread(m);
+		t.start();
+}
+	}

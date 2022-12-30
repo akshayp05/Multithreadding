@@ -1,0 +1,47 @@
+i)Performing single task from single Thread.
+ class Test extends Thread{
+       public void run() {
+    	 
+                         }
+       public static void main(String[] args) {
+		Test t=new Test();
+		t.start();
+	}
+	}
+ii)Performing single task from multiple Thread.
+ class Test extends Thread{
+       public void run() {
+    	 
+                         }
+       public static void main(String[] args) {
+		Test t=new Test();
+                Test t1=new Test();
+		t.start();
+                t1.start();
+        }
+	}
+iii)Performing multiple task from single Thread.-Not posible (x Its wrong case)
+iv)Performing multiple task from multiple Thread.
+ class Test extends Thread{
+       public void run() {
+    	                     ............// Task-1
+                         }
+}
+ class Test1 extends Thread{
+       public void run() {
+    	                           ............// Task-2
+                         }
+}
+ class Test2 extends Thread{
+       public void run1() {
+    	                        ............// Task-3
+                         }
+}
+       public static void main(String[] args) {
+		Test t=new Test();       ......Tread-1
+                Test1 t1=new Test1();     ......Tread-2
+                Test2 t2=new Test2();    ......Tread-3
+		t.start();
+                t1.start();
+        }
+	}
